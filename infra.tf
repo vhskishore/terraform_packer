@@ -29,16 +29,16 @@ resource "aws_subnet" "public-subnet" {
     }
 }
 
-resource "aws_subnet" "private-subnet" {
-    count = local.count
-    vpc_id = "${aws_vpc.default.id}"
-    map_public_ip_on_launch = true
-    cidr_block = "${cidrsubnet(var.vpc_cidr, 7, count.index + length(data.aws_availability_zones.azs.names))}"
-    availability_zone = "${element(data.aws_availability_zones.azs.names,count.index)}"
-    tags = {
-        Name = "PRI-SN-${count.index+1}-${aws_vpc.default.tags.Name}"
-    }
-}
+# resource "aws_subnet" "private-subnet" {
+#     count = local.count
+#     vpc_id = "${aws_vpc.default.id}"
+#     map_public_ip_on_launch = true
+#     cidr_block = "${cidrsubnet(var.vpc_cidr, 7, count.index + length(data.aws_availability_zones.azs.names))}"
+#     availability_zone = "${element(data.aws_availability_zones.azs.names,count.index)}"
+#     tags = {
+#         Name = "PRI-SN-${count.index+1}-${aws_vpc.default.tags.Name}"
+#     }
+# }
 
 resource "aws_route_table" "terraform-public" {
     vpc_id = "${aws_vpc.default.id}"
@@ -51,12 +51,12 @@ resource "aws_route_table" "terraform-public" {
     }
 }
 
-resource "aws_route_table" "terraform-private" {
-    vpc_id = "${aws_vpc.default.id}"
-    tags = {
-        Name = "private-RT-${aws_vpc.default.tags.Name}"
-    }
-}
+# resource "aws_route_table" "terraform-private" {
+#     vpc_id = "${aws_vpc.default.id}"
+#     tags = {
+#         Name = "private-RT-${aws_vpc.default.tags.Name}"
+#     }
+# }
 
 resource "aws_route_table_association" "terraform-public" {
     count = local.count
@@ -64,11 +64,11 @@ resource "aws_route_table_association" "terraform-public" {
     route_table_id = "${aws_route_table.terraform-public.id}"
 }
 
-resource "aws_route_table_association" "terraform-private" {
-    count = local.count
-    subnet_id = "${element(aws_subnet.private-subnet.*.id, count.index)}"
-    route_table_id = "${aws_route_table.terraform-private.id}"
-}
+# resource "aws_route_table_association" "terraform-private" {
+#     count = local.count
+#     subnet_id = "${element(aws_subnet.private-subnet.*.id, count.index)}"
+#     route_table_id = "${aws_route_table.terraform-private.id}"
+# }
 
 # resource "aws_route_table_association" "terraform-private" {
 #     count = local.count
