@@ -70,6 +70,12 @@ resource "aws_route_table_association" "terraform-private" {
     route_table_id = "${aws_route_table.terraform-private.id}"
 }
 
+# resource "aws_route_table_association" "terraform-private" {
+#     count = local.count
+#     subnet_id = "${element(aws_subnet.private-subnet.*.id, count.index)}"
+#     route_table_id = "${aws_route_table.terraform-private.id}"
+# }
+
 resource "aws_security_group" "allow_all" {
   name        = "SG-AA-${aws_vpc.default.tags.Name}"
   description = "Allow_All"
