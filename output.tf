@@ -35,3 +35,7 @@ output "igw_id" {
 output "SG" {
     value = "${aws_security_group.allow_all.ingress}"
 }
+
+output "EC2_id" {
+    value = "${aws_instance.pub-instance.id}"
+}
