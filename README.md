@@ -26,15 +26,15 @@
 
 **Passing Environment Variables in Powershell**
 
-$env:AWS_ACCESS_KEY_ID=""
+    $env:AWS_ACCESS_KEY_ID=""
 
-$env:AWS_SECRET_ACCESS_KEY=""
+    $env:AWS_SECRET_ACCESS_KEY=""
 
 **Passing Environment Variables in Linux**
 
-export AWS_ACCESS_KEY_ID=""
+    export AWS_ACCESS_KEY_ID=""
 
-export AWS_SECRET_ACCESS_KEY=""
+    export AWS_SECRET_ACCESS_KEY=""
 
 # Authentication and Configuration
 
@@ -50,7 +50,7 @@ export AWS_SECRET_ACCESS_KEY=""
 
     terraform state mv <current_resource_name> <rename_resource_name>
 
-    # Example:
+# Example:
 
     terraform state mv aws_s3_bucket.packer aws_s3_bucket.vhskpackertest
 
