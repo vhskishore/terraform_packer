@@ -1,10 +1,11 @@
 resource "aws_vpc" "default" {
-    cidr_block = "${var.vpc_cidr}"
-    enable_dns_hostnames = true
-    tags = {
-        Name = timestamp()
-	    Owner = "HSK"
-    }
+  cidr_block           = var.vpc_cidr
+  enable_dns_hostnames = true
+  tags = {
+    #Name  = timestamp()
+    Name = var.vpcName
+    Owner = var.vpcValue
+  }
 }
 
 # resource "aws_internet_gateway" "default" {
