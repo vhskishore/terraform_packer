@@ -62,7 +62,7 @@
 **_Now we can comment s3 bucket or we can remove s3 bucket code._**
 
 
-<span style="color:red">some **This is Red Bold.** text</span>
+$${\color{red}Red}$$
 
 Error: Backend configuration changed
 │ 
