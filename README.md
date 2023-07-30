@@ -1,4 +1,4 @@
-### **_terraform_packer" _**
+### **_terraform_packer_**
 
 
 # Terraform on AWS
