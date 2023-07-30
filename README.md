@@ -62,11 +62,11 @@
 **_Now we can comment s3 bucket or we can remove s3 bucket code._**
 
 
-# {\color{red}Error: Backend configuration changed}
+# $${\color{red}Error: Backend configuration changed}$$
 
 - A change in the backend configuration has been detected, which may require migrating existing state.
-- If you wish to attempt automatic migration of the state, use "terraform init -migrate-state".
-- If you wish to store the current configuration with no changes to the state, use "terraform init -reconfigure".
+- If you wish to attempt automatic migration of the state, use "terraform init $${\color{red}-migrate-state"}$$.
+- If you wish to store the current configuration with no changes to the state, use "terraform init $${\color{red}-reconfigure"}$$".
 
 # Git issue
 
