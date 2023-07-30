@@ -62,7 +62,7 @@
 **_Now we can comment s3 bucket or we can remove s3 bucket code._**
 
 - ![#f03c15] Error
-- text in red
+<span style="color:red">some **This is Red Bold.** text</span>
 
 Error: Backend configuration changed
 │ 
