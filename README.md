@@ -1,8 +1,7 @@
-### **_
+###
 <p align="center">
-terraform_packer
+**_terraform_packer_**
 </p>
-_**
 
 
 # Terraform on AWS
