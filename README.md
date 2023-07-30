@@ -66,4 +66,4 @@ Error: Backend configuration changed
 
 .terraform/providers/registry.terraform.io/hashicorp/aws/5.10.0/darwin_arm64/terraform-provider-aws_v5.10.0_x5 is 337.85 MB; this exceeds GitHub's file size limit of 100.00 MB
 
-git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
+    git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
