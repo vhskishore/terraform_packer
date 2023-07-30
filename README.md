@@ -3,7 +3,7 @@
 
 # Terraform on AWS
 
-IaaC/IaC - Declare infra in HCL and execute to deploy it.
+- IaaC/IaC - Declare infra in HCL and execute to deploy it.
 
 # Advantages of Terraform:
 
@@ -13,14 +13,15 @@ IaaC/IaC - Declare infra in HCL and execute to deploy it.
 - Terraform Workspaces for having identical environment.
 - Terraform modules for reusable code.
 -  terraform logic is cloud egnnostic but syntax changes.
+- Importing of resources which is created manually is easy
 
-Terraform loads variables in the following order, with later sources taking precedence over earlier ones:
+# Terraform loads variables in the following order, with later sources taking precedence over earlier ones:
 
-    Environment variables
-    The terraform.tfvars file, if present.
-    The terraform.tfvars.json file, if present.
-    Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
-    Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
+    - Environment variables
+    - The terraform.tfvars file, if present.
+    - The terraform.tfvars.json file, if present.
+    - Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
+    - Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
 
 
 **Passing Environment Variables in Powershell**
@@ -34,3 +35,12 @@ $env:AWS_SECRET_ACCESS_KEY=""
 export AWS_ACCESS_KEY_ID=""
 
 export AWS_SECRET_ACCESS_KEY=""
+
+# Authentication and Configuration
+
+- Parameters in the provider configuration (provider.tf access keys)
+- Environment Variables
+- Shared Configuration files 
+- Shared Configuration files
+- Container Credentials
+- Instance Profile Credentials and region. (IAM Role)

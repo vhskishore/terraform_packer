@@ -7,35 +7,35 @@ output "vpc_name" {
 }
 
 
-output "public_cidrs" {
-    value = "${aws_subnet.public-subnet.*.cidr_block}"
+# output "public_cidrs" {
+#     value = "${aws_subnet.public-subnet.*.cidr_block}"
   
-}
+# }
 
-output "private_cidrs" {
-    value = "${aws_subnet.private-subnet.*.cidr_block}"
+# output "private_cidrs" {
+#     value = "${aws_subnet.private-subnet.*.cidr_block}"
   
-}
+# }
 
-output "public_subnet_azs" {
-    value = "${aws_subnet.public-subnet.*.availability_zone}"
+# output "public_subnet_azs" {
+#     value = "${aws_subnet.public-subnet.*.availability_zone}"
   
-}
+# }
 
-output "private_subnet_azs" {
-    value = "${aws_subnet.private-subnet.*.availability_zone}"
+# output "private_subnet_azs" {
+#     value = "${aws_subnet.private-subnet.*.availability_zone}"
   
-}
+# }
 
-output "igw_id" {
-    value = "${aws_internet_gateway.default.id}"
+# output "igw_id" {
+#     value = "${aws_internet_gateway.default.id}"
   
-}
+# }
 
-output "SG" {
-    value = "${aws_security_group.allow_all.ingress}"
-}
+# output "SG" {
+#     value = "${aws_security_group.allow_all.ingress}"
+# }
 
-output "EC2_id" {
-    value = "${aws_instance.pub-instance.id}"
-}
+# output "EC2_id" {
+#     value = "${aws_instance.pub-instance.id}"
+# }
