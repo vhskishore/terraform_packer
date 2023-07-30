@@ -61,6 +61,8 @@
 
 **_Now we can comment s3 bucket or we can remove s3 bucket code._**
 
+- ![#f03c15] Error `#f03c15`
+
 Error: Backend configuration changed
 │ 
 │ A change in the backend configuration has been detected, which may require migrating existing state.
