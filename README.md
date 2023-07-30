@@ -53,6 +53,14 @@
 
     terraform state mv aws_s3_bucket.packer aws_s3_bucket.vhskpackertest
 
+# Remove Terraform Resource from statefile
+    terraform state rm <resource_name>
+
+# Example
+    terraform state rm aws_s3_bucket.packer
+
+**_Now we can comment s3 bucket or we can remove s3 bucket code._**
+
 Error: Backend configuration changed
 │ 
 │ A change in the backend configuration has been detected, which may require migrating existing state.

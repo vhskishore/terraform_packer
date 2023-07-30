@@ -10,7 +10,6 @@ terraform {
     bucket = "hskpackertest"
     key = "terraform_packer.tfstate"
     region = "us-east-1"
-    
   }
 }
 
