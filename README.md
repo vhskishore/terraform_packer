@@ -23,12 +23,14 @@ Terraform loads variables in the following order, with later sources taking prec
     Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
 
 
-************************************Passing Environment Variables in Powershell*******************************
+**Passing Environment Variables in Powershell**
 
 $env:AWS_ACCESS_KEY_ID=""
+
 $env:AWS_SECRET_ACCESS_KEY=""
 
-************************************Passing Environment Variables in Linux************************************
+**Passing Environment Variables in Linux**
 
 export AWS_ACCESS_KEY_ID=""
+
 export AWS_SECRET_ACCESS_KEY=""
