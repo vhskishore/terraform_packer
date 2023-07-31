@@ -4,4 +4,4 @@ variable "aws_region" {}
 variable "vpc_cidr" {}
 # variable "key_name" {}
 variable "vpcName" {}
-variable "vpcValue" {} 
+variable "vpcValue" {}

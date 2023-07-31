@@ -4,7 +4,6 @@ resource "aws_vpc" "default" {
   tags = {
     #Name  = timestamp()
     Name = var.vpcName
-    Owner = var.vpcValue
   }
 }
 

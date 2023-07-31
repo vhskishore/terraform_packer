@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "packer" {
-    bucket = "hskpackertest"
+# resource "aws_s3_bucket" "packer" {
+#     bucket = "hskpackertest"
 
-    tags = {
-      Name = "hskpackertest"
-      Environment = "QA"
-    }
-  
-}
+#     tags = {
+#       Name = "hskpackertest"
+#       Environment = "QA"
+#     }
+
+# }
