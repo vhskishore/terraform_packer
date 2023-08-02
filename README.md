@@ -73,3 +73,9 @@
 .terraform/providers/registry.terraform.io/hashicorp/aws/5.10.0/darwin_arm64/terraform-provider-aws_v5.10.0_x5 is 337.85 MB; this exceeds GitHub's file size limit of 100.00 MB
 
     git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
+
+#  Meta Arguments
+    1) Prevent Destroy
+    2) Create Before Destroy
+    3) Ignore Changes (If any changes are done in console if we run terraform apply that resource work be changes it's state
+        if ec2 is shutdown or tages are changed if we run terraform apply then instance will start and tags will changed as per script values. if we place ignore changes terraform won't change it's current state.)
