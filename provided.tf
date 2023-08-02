@@ -7,9 +7,9 @@ terraform {
   }
   #execution starts from here, so when you add backend in script, run terraform init again
   backend "s3" {
-    bucket         = "hskpackertest"
-    key            = "terraform_packer.tfstate"
-    region         = "us-east-1"
+    bucket = "hskpackertest"
+    key    = "terraform_packer.tfstate"
+    region = "us-east-1"
     # dynamodb_table = "hskpackertestddb"
     # encrypt        = true
   }

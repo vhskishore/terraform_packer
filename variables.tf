@@ -5,3 +5,7 @@ variable "vpc_cidr" {}
 # variable "key_name" {}
 variable "vpcName" {}
 variable "vpcValue" {}
+variable "public-cidr-subnet" {}
+variable "pub-cidr-az" {}
+variable "private-cidr-subnet" {}
+variable "pri-cidr-az" {}
