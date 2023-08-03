@@ -94,3 +94,14 @@
 - ERROR: showd errors that prevent terraform from continuing
 - EARN: logs warning, which may indicate misconfiguration or mistakes, but are not critical to execution.
 - INFO: shows general, high-level messages about the execution process.
+
+# Example
+ - For setting logging in terraform, enable logging by using below commands
+ - For Windows:
+        SET TF_LOG=DEBUG/TRACE/ERROR/EARN
+ - For Windows Powershell:
+        $env:TF_LOG="DEBUG/TRACE/ERROR/EARN" , Get-ChildItem Env:,
+        $env:TF_LOG_PATH="terraform.txt"
+ - For Linux
+        export TF_LOG=DEBUG/TRACE/ERROR/EARN
+- To Remove assign empty values to TF_LOG variable
