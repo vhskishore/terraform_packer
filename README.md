@@ -79,3 +79,18 @@
     2) Create Before Destroy
     3) Ignore Changes (If any changes are done in console if we run terraform apply that resource work be changes it's state
         if ec2 is shutdown or tages are changed if we run terraform apply then instance will start and tags will changed as per script values. if we place ignore changes terraform won't change it's current state.)
+
+# Terraform Workspaces
+
+- in realtime uat and production are same then we can use terraform workspaces
+- we want multiple identical environments with same resources
+- and it stores statefile in different environment folder locations.
+
+# Terraform Debug Mode
+
+### Terraform exposes the TF_LOG environment variable for setting the level of logging verbosity, of which there are five:
+- TRACE: the most elaborate verbosity, showd every step taken by terraform and products enormous outputs with internal logs.
+- DEBUG: describes what happens internally in a more concise way compared to TRACE.
+- ERROR: showd errors that prevent terraform from continuing
+- EARN: logs warning, which may indicate misconfiguration or mistakes, but are not critical to execution.
+- INFO: shows general, high-level messages about the execution process.

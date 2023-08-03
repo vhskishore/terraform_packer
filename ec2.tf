@@ -6,12 +6,13 @@ resource "aws_instance" "public-ec2" {
   subnet_id                   = aws_subnet.public-subnet.id
   associate_public_ip_address = true
   tags = {
-    Name  = "${var.vpc_name}-${var.env}-Server-1"
-    Env = var.env
+    #    Name  = var.vpc_name-var.env-Server-1
+    #Name  = "${merge(var.vpcName, var.env)}-server1"
+    Env   = var.env
     Owner = "HSK"
   }
-  lifecycle {
-    prevent_destroy = true
-    ignore_changes = [ tags ]
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  #   ignore_changes  = [tags]
+  # }
 }
