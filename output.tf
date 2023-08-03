@@ -6,6 +6,9 @@ output "vpc_name" {
   value = aws_vpc.default.tags.Name
 }
 
+output "instance_id" {
+  value = aws_instance.public-ec2.id
+}
 
 # output "public_cidrs" {
 #     value = "${aws_subnet.public-subnet.*.cidr_block}"

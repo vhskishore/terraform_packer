@@ -10,7 +10,7 @@ resource "aws_instance" "public-ec2" {
     ENV   = "Prod"
     Owner = "HSK"
   }
-#   lifecycle {
-#     prevent_destroy = true
-#   }
+  #   lifecycle {
+  #     prevent_destroy = true
+  #   }
 }

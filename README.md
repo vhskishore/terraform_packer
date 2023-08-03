@@ -79,3 +79,13 @@
     2) Create Before Destroy
     3) Ignore Changes (If any changes are done in console if we run terraform apply that resource work be changes it's state
         if ec2 is shutdown or tages are changed if we run terraform apply then instance will start and tags will changed as per script values. if we place ignore changes terraform won't change it's current state.)
+        (If we created security group by allowing few ports and developer enabled few ports on console, developer don't want to disable those ports and he don't want to reach us for these small issue. So, for that we can use Ignore Changes 
+        lifecycle {
+          ignore_changes = [ingress, egress]
+        }
+        for ec2
+        lifecycle
+        {
+            ignore_changes = [tags]
+        }
+        )
