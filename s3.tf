@@ -4,6 +4,7 @@
 #     tags = {
 #       Name = "hskpackertest"
 #       Environment = "QA"
+#       Env = var.env
 #     }
 
 # }
@@ -14,6 +15,7 @@
 #   tags = {
 #     Name        = "hskpackertest"
 #     Environment = "QA"
+#      Env = var.env
 #   }
 #   lifecycle {
 #     create_before_destroy = true

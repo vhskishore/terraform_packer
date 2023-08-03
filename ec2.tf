@@ -6,11 +6,12 @@ resource "aws_instance" "public-ec2" {
   subnet_id                   = aws_subnet.public-subnet.id
   associate_public_ip_address = true
   tags = {
-    Name  = "Server-1"
-    ENV   = "Prod"
+    Name  = "${var.vpc_name}-${var.env}-Server-1"
+    Env = var.env
     Owner = "HSK"
   }
-#   lifecycle {
-#     prevent_destroy = true
-#   }
+  lifecycle {
+    prevent_destroy = true
+    ignore_changes = [ tags ]
+  }
 }

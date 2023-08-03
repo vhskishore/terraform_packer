@@ -3,7 +3,8 @@ resource "aws_vpc" "default" {
   enable_dns_hostnames = true
   tags = {
     #Name  = timestamp()
-    Name = var.vpcName
+    Name = var.vpcName-${var.env}
+    Env = var.env
   }
 }
 
@@ -14,6 +15,7 @@ resource "aws_subnet" "public-subnet" {
   availability_zone       = var.pub-cidr-az
   tags = {
     Name = "Pub-SN-1"
+    Env = var.env
   }
 }
 
@@ -23,6 +25,7 @@ resource "aws_subnet" "private-subnet" {
   availability_zone = var.pri-cidr-az
   tags = {
     Name = "Pri-SN-1"
+    Env = var.env
   }
 }
 
@@ -30,6 +33,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.default.id
   tags = {
     Name = "IGW-${aws_vpc.default.tags.Name}"
+    Env = var.env
   }
 }
 
@@ -71,5 +75,8 @@ resource "aws_security_group" "sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+  lifecycle {
+    ignore_changes = [ ingress, egress ]
   }
 }
